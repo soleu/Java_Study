@@ -1,4 +1,4 @@
-package com.example.homework_4;
+package com.example.homework_4.RollTheDice;
 
 public class RollTheDiceMain {
     public static void main(String[] args) {

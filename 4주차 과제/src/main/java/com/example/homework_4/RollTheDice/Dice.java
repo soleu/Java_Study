@@ -1,4 +1,4 @@
-package com.example.homework_4;
+package com.example.homework_4.RollTheDice;
 
 public class Dice {
     private int face; //주사위 면
