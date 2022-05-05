@@ -1,4 +1,9 @@
+package SchoolSystem;
+
+import SchoolSystem.SchoolManager;
+
 public class Test {
+
     public static void main(String[] args) {
 
         Person p1 = new Person(12345, "chPark");
@@ -35,6 +40,5 @@ public class Test {
         sm.addMember(t1);
 
         sm.displayMemberAll();
-
     }
 }

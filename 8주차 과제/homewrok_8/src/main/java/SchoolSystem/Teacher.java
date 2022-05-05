@@ -1,3 +1,5 @@
+package SchoolSystem;
+
 public class Teacher extends Person {
     private String subject;
     public static int count;

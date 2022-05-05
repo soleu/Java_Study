@@ -1,5 +1,8 @@
+package SchoolSystem;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class SchoolManager {
     private static SchoolManager instance = new SchoolManager();

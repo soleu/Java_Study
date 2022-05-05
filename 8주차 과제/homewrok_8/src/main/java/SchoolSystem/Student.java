@@ -1,3 +1,5 @@
+package SchoolSystem;
+
 public class Student extends Person {
     private int grade;
     public static int count;
