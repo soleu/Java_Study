@@ -1,3 +1,5 @@
+package view;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -50,26 +52,11 @@ public class BankManager {
         return false;
     }
 
-    public void join() {
-        System.out.println("=========[회원가입]=========");
-        String id = "";
-        while (true) {
-            System.out.print("아이디를 입력해주세요 : ");
-            id = sc2.nextLine();
-            if (!isExistedId(id)) break;
-        }
-        System.out.print("비밀번호를 입력해주세요 : ");
-        String pwd = sc2.nextLine();
+    public void join(String id,String pwd) {
         accounts.add(new Account(id, pwd));
-        System.out.println("환영합니다." + id + "님!");
     }
 
-    public Account login() {
-        System.out.println("=========[로그인]=========");
-        System.out.print("아이디를 입력해주세요 : ");
-        String id = sc2.nextLine();
-        System.out.print("비밀번호를 입력해주세요 : ");
-        String pwd = sc2.nextLine();
+    public Account login(String id, String pwd) {
         for (Account a : accounts)
             if (a.getId().equals(id) && a.getPwd().equals(pwd))
                 return a;

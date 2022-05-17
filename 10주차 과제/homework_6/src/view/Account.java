@@ -1,3 +1,5 @@
+package view;
+
 public class Account {
     private String id;
     private String pwd;
