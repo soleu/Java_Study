@@ -9,22 +9,24 @@ import java.awt.event.ActionListener;
 
 public class FrameMain extends JFrame {
     BankManager manager = BankManager.getInstance();
-    Button SignUp_btn, SignIn_btn;
+    Button signUp_btn, signIn_btn;
     Label title_label;
 
     public FrameMain(String str) {
         super(str);
+        setSize(300, 200);
+        setLayout(new BorderLayout());
 
         Panel p = new Panel();
         p.setBackground(Color.PINK);
-        title_label = new Label("[은행 시스템] - 고객 관리", Label.CENTER);
-        SignUp_btn = new Button(" 회원가입 ");
-        SignIn_btn = new Button(" 로그인 ");
-        setSize(300, 200);
+        p.setLayout(new GridLayout(3, 1));
+        title_label = new Label("[고객 관리]", Label.CENTER);
+        signUp_btn = new Button(" 회원가입 ");
+        signIn_btn = new Button(" 로그인 ");
 
         p.add(title_label);
-        p.add(SignUp_btn);
-        p.add(SignIn_btn);
+        p.add(signIn_btn);
+        p.add(signUp_btn);
         add(p);
 
         Dimension frameSize = getSize();
@@ -32,9 +34,10 @@ public class FrameMain extends JFrame {
         setLocation((windowSize.width - frameSize.width) / 2,
                 (windowSize.height - frameSize.height) / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
         setVisible(true);
 
-        SignUp_btn.addActionListener(new ActionListener() {
+        signUp_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new SignUpFrame();
@@ -42,7 +45,7 @@ public class FrameMain extends JFrame {
             }
         });
 
-        SignIn_btn.addActionListener(new ActionListener() {
+        signIn_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new SignInFrame();

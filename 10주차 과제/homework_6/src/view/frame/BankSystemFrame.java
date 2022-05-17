@@ -14,6 +14,7 @@ public class BankSystemFrame extends JFrame {
     Button deposit_btn,withdrawal_btn,query_btn,logout_btn;
 
     BankSystemFrame(Account user){
+        setSize(300, 200);
         Panel p = new Panel();
         p.setBackground(Color.PINK);
         title_label = new Label("[은행 시스템] - 계좌 관리", Label.CENTER);
@@ -36,7 +37,7 @@ public class BankSystemFrame extends JFrame {
         setLocation((windowSize.width - frameSize.width) / 2,
                 (windowSize.height - frameSize.height) / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(300, 200);
+
         setVisible(true);
 
         deposit_btn.addActionListener(new ActionListener() {

@@ -14,6 +14,8 @@ public class SignUpFrame extends JFrame {
 
     SignUpFrame() {
         super("회원가입");
+        setSize(300, 200);
+
         JPanel jPanel = new JPanel();
 
         jPanel.setBackground(Color.BLUE);
@@ -45,7 +47,7 @@ public class SignUpFrame extends JFrame {
         setLocation((windowSize.width - frameSize.width) / 2,
                 (windowSize.height - frameSize.height) / 2); //화면 중앙에 띄우기
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(300, 200);
+
         setVisible(true);
 
         back_btn.addActionListener(new ActionListener() {

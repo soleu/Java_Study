@@ -14,6 +14,7 @@ public class DepositFrame extends JFrame {
     Button submit_btn;
 
     DepositFrame(Account user) {
+        setSize(300, 200);
         Panel p = new Panel();
         p.setBackground(Color.PINK);
 
@@ -33,7 +34,7 @@ public class DepositFrame extends JFrame {
         setLocation((windowSize.width - frameSize.width) / 2,
                 (windowSize.height - frameSize.height) / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(300, 200);
+
         setVisible(true);
 
         submit_btn.addActionListener(new ActionListener() {

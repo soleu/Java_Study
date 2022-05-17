@@ -14,6 +14,7 @@ public class QueryFrame extends JFrame {
     Button back_btn;
 
     QueryFrame(Account user) {
+        setSize(300, 200);
         Panel p = new Panel();
         p.setBackground(Color.PINK);
 
@@ -31,7 +32,7 @@ public class QueryFrame extends JFrame {
         setLocation((windowSize.width - frameSize.width) / 2,
                 (windowSize.height - frameSize.height) / 2);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setSize(300, 200);
+
         setVisible(true);
 
         back_btn.addActionListener(new ActionListener() {

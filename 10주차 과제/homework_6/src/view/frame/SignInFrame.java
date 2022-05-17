@@ -15,10 +15,11 @@ public class SignInFrame extends JFrame {
 
     SignInFrame() {
         super("로그인");
+        setSize(300, 200);
         JPanel jPanel = new JPanel();
 
         jPanel.setBackground(Color.BLUE);
-
+        jPanel.setLayout(new FlowLayout());
         back_btn = new Button("<- ");
         title_label = new Label("[회원가입]", Label.CENTER);
 
@@ -26,21 +27,20 @@ public class SignInFrame extends JFrame {
 
         JLabel label2 = new JLabel("암호: ", JLabel.CENTER);
 
-        JTextField id = new JTextField(10);
+        JTextField id = new JTextField(20);
 
-        JPasswordField password = new JPasswordField(10);
+        JPasswordField password = new JPasswordField(20);
 
         submit_btn = new Button("확인");
 
-        setSize(300, 200);
-
-        jPanel.add(back_btn);
+        jPanel.add(back_btn,"North");
         jPanel.add(title_label);
-        jPanel.add(label1);
-        jPanel.add(id);
-        jPanel.add(label2);
-        jPanel.add(password);
-        jPanel.add(submit_btn);
+        jPanel.add(label1,"West");
+        jPanel.add(id,"Center");
+        jPanel.add(label2,"West");
+        jPanel.add(password,"Center");
+        jPanel.add(submit_btn,"South");
+
         add(jPanel);
 
         Dimension frameSize = getSize();
