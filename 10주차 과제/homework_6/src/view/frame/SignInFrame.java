@@ -18,14 +18,14 @@ public class SignInFrame extends JFrame {
         setSize(300, 200);
         JPanel jPanel = new JPanel();
 
-        jPanel.setBackground(Color.BLUE);
-        jPanel.setLayout(new FlowLayout());
+        jPanel.setBackground(Color.PINK);
+        jPanel.setLayout(null);
         back_btn = new Button("<- ");
-        title_label = new Label("[회원가입]", Label.CENTER);
+        title_label = new Label("[로그인]");
 
-        JLabel label1 = new JLabel("아이디: ", JLabel.CENTER);
+        JLabel id_label = new JLabel("아이디: ");
 
-        JLabel label2 = new JLabel("암호: ", JLabel.CENTER);
+        JLabel pw_label = new JLabel("암호: ");
 
         JTextField id = new JTextField(20);
 
@@ -33,13 +33,22 @@ public class SignInFrame extends JFrame {
 
         submit_btn = new Button("확인");
 
-        jPanel.add(back_btn,"North");
+        back_btn.setBounds(20, 20, 50, 30);
+        title_label.setBounds(130, 20, 70, 30);
+        id_label.setBounds(20, 60, 70, 40);
+        id.setBounds(60, 70, 200, 30);
+        pw_label.setBounds(20, 90, 150, 40);
+        password.setBounds(60, 100, 200, 30);
+        submit_btn.setBounds(120, 130, 70, 30);
+
+
+        jPanel.add(back_btn);
         jPanel.add(title_label);
-        jPanel.add(label1,"West");
-        jPanel.add(id,"Center");
-        jPanel.add(label2,"West");
-        jPanel.add(password,"Center");
-        jPanel.add(submit_btn,"South");
+        jPanel.add(id_label);
+        jPanel.add(id);
+        jPanel.add(pw_label);
+        jPanel.add(password);
+        jPanel.add(submit_btn);
 
         add(jPanel);
 
