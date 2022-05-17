@@ -52,7 +52,7 @@ public class BankManager {
         return false;
     }
 
-    public void join(String id,String pwd) {
+    public void join(String id, String pwd) {
         accounts.add(new Account(id, pwd));
     }
 
@@ -63,32 +63,16 @@ public class BankManager {
         return null;
     }
 
-    public void deposit(Account acc) {
-        System.out.println("=========[계좌 입금]=========");
-        System.out.println("입금할 금액을 입력해주세요.");
-        System.out.print("입력 : ");
-        int money = sc.nextInt();
+    public void deposit(Account acc, int money) {
         acc.deposit(money);
-
-        System.out.println("입금되었습니다.");
     }
 
-    public void withdrawal(Account acc) {
-        System.out.println("=========[계좌 출금]=========");
-        System.out.println("출금할 금액을 입력해주세요.");
-        System.out.print("입력 : ");
-        int money = sc.nextInt();
+    public boolean withdrawal(Account acc, int money) {
         boolean succeeded = acc.withdrawal(money);
-
-        if (!succeeded) {
-            System.out.println("잔액이 부족합니다.");
-            return;
-        }
-        System.out.println("입금되었습니다.");
+        return succeeded;
     }
 
-    public void query(Account acc) {
-        System.out.println("=========[잔액 확인]=========");
-        System.out.println("현재 잔액은 " + acc.getMoney() + "원 입니다.");
+    public int query(Account acc) {
+        return acc.getMoney();
     }
 }

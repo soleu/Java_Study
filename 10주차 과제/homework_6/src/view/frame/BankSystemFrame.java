@@ -16,16 +16,13 @@ public class BankSystemFrame extends JFrame {
     BankSystemFrame(Account user){
         Panel p = new Panel();
         p.setBackground(Color.PINK);
-        String input_placeholder="";
-        title_label = new Label("[은행 시스템] - 고객 관리", Label.CENTER);
+        title_label = new Label("[은행 시스템] - 계좌 관리", Label.CENTER);
 
         deposit_btn=new Button("[입금하기]");
         withdrawal_btn=new Button("[출금하기]");
         query_btn=new Button("[잔액조회]");
         logout_btn=new Button("[로그아웃]");
 
-        JLabel label1 = new JLabel(input_placeholder, JLabel.CENTER);
-        JTextField id = new JTextField(10);
 
         p.add(title_label);
         p.add(deposit_btn);
@@ -45,7 +42,29 @@ public class BankSystemFrame extends JFrame {
         deposit_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new DepositFrame(user);
+                setVisible(false);
+            }
+        });
+        withdrawal_btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new WithdrawalFrame(user);
+                setVisible(false);
+            }
+        });
+        query_btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new QueryFrame(user);
+                setVisible(false);
+            }
+        });
+        logout_btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new FrameMain("은행 시스템");
+                setVisible(false);
             }
         });
 

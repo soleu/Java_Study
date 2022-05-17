@@ -1,7 +1,6 @@
-package view;
+package view.frame;
 
-import view.frame.SignInFrame;
-import view.frame.SignUpFrame;
+import view.BankManager;
 
 import javax.swing.*;
 import java.awt.*;

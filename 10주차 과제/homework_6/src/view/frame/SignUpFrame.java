@@ -1,7 +1,6 @@
 package view.frame;
 
 import view.BankManager;
-import view.FrameMain;
 
 import javax.swing.*;
 import java.awt.*;
