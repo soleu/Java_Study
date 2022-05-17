@@ -16,13 +16,20 @@ public class WithdrawalFrame extends JFrame {
     WithdrawalFrame(Account user) {
         setSize(300, 200);
         Panel p = new Panel();
-        p.setBackground(Color.PINK);
+        p.setBackground(Color.DARK_GRAY);
+        p.setLayout(null);
 
-        title_label = new Label("[은행 시스템] - 출금", Label.CENTER);
+        title_label = new Label("[출금]", Label.CENTER);
         JLabel withdrawal_label = new JLabel("출금 금액을 입력해주세요", JLabel.CENTER);
-        JLabel money_label = new JLabel("현재 금액 : " + user.getMoney(), JLabel.CENTER);
+        JLabel money_label = new JLabel("현재 금액 : " + user.getMoney()+" 원", JLabel.CENTER);
         JTextField withdrawal_money = new JTextField(10);
         submit_btn = new Button("확인");
+
+        title_label.setBounds(85,05,140,30);
+        withdrawal_label.setBounds(55,30,200,40);
+        money_label.setBounds(55,70,200,30);
+        withdrawal_money.setBounds(55,100,200,30);
+        submit_btn.setBounds(120,130,70,30);
 
         p.add(title_label);
         p.add(withdrawal_label);

@@ -16,12 +16,18 @@ public class DepositFrame extends JFrame {
     DepositFrame(Account user) {
         setSize(300, 200);
         Panel p = new Panel();
-        p.setBackground(Color.PINK);
+        p.setBackground(Color.DARK_GRAY);
+        p.setLayout(null);
 
-        title_label = new Label("[은행 시스템] - 계좌 관리", Label.CENTER);
+        title_label = new Label("[입금]", Label.CENTER);
         JLabel deposit_label = new JLabel("입금할 금액을 입력해주세요", JLabel.CENTER);
         JTextField deposit_money = new JTextField(10);
         submit_btn = new Button("확인");
+
+        title_label.setBounds(85,05,140,30);
+        deposit_label.setBounds(55,30,200,40);
+        deposit_money.setBounds(55,70,200,30);
+        submit_btn.setBounds(120,130,70,30);
 
         p.add(title_label);
         p.add(deposit_label);

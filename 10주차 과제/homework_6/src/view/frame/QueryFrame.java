@@ -16,11 +16,18 @@ public class QueryFrame extends JFrame {
     QueryFrame(Account user) {
         setSize(300, 200);
         Panel p = new Panel();
-        p.setBackground(Color.PINK);
+        p.setBackground(Color.DARK_GRAY);
+        p.setLayout(null);
 
         back_btn = new Button("<-");
-        title_label = new Label("[은행 시스템] - 잔액 조회", Label.CENTER);
-        JLabel money_label = new JLabel("현재 금액" + user.getMoney()+"원", JLabel.CENTER);
+        title_label = new Label("잔액 조회", Label.CENTER);
+        JLabel money_label = new JLabel("현재 금액 : " + user.getMoney()+" 원", JLabel.CENTER);
+
+        title_label.setBounds(85,05,140,30);
+        back_btn.setBounds(20, 20, 50, 30);
+        title_label.setBounds(55, 20, 200, 40);
+        money_label.setBounds(55, 80, 200, 30);
+
 
         p.add(back_btn);
         p.add(title_label);

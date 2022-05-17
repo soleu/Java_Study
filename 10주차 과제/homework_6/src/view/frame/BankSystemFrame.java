@@ -16,14 +16,20 @@ public class BankSystemFrame extends JFrame {
     BankSystemFrame(Account user){
         setSize(300, 200);
         Panel p = new Panel();
-        p.setBackground(Color.PINK);
-        title_label = new Label("[은행 시스템] - 계좌 관리", Label.CENTER);
+        p.setBackground(Color.DARK_GRAY);
+        p.setLayout(null);
 
+        title_label = new Label("[은행 시스템] - 계좌 관리");
         deposit_btn=new Button("[입금하기]");
         withdrawal_btn=new Button("[출금하기]");
         query_btn=new Button("[잔액조회]");
         logout_btn=new Button("[로그아웃]");
 
+        title_label.setBounds(80,10,150,30);
+        deposit_btn.setBounds(80,40,150,30);
+        withdrawal_btn.setBounds(80,70,150,30);
+        query_btn.setBounds(80,100,150,30);
+        logout_btn.setBounds(80,130,150,30);
 
         p.add(title_label);
         p.add(deposit_btn);
