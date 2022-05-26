@@ -32,6 +32,7 @@ public class BankSystemFrame extends JFrame {
         logout_btn.setBounds(80,130,150,30);
 
         p.add(title_label);
+        p.add(title_label);
         p.add(deposit_btn);
         p.add(withdrawal_btn);
         p.add(query_btn);
